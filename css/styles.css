@@ -703,7 +703,7 @@ a:focus .icon-footer {
 }
 
 .block-input {
-	position: relative;
+	
 	display: flex;
 	flex-direction: column;
 }
@@ -814,7 +814,9 @@ a:focus .icon-footer {
 
 .checkbox-text {
   display: block;
-
+  font-size: 14px;
+  line-height: 1.71; 
+  letter-spacing: 0.03em;
 }
 .checkbox-icon {
 	position: absolute;
