@@ -672,7 +672,7 @@ a:focus .icon-footer {
 
 	padding: 40px 40px;
 	max-width: 528px;
-	min-height: 581px;
+	height: 581px;
 	margin: 0 auto;
 	background-color: var(--primary-white-color);
 	box-shadow: var(--modal-shadow);
@@ -806,6 +806,7 @@ a:focus .icon-footer {
 }
 
 .checkbox-text {	
+
   font-size: 14px;
   line-height: 1.71; 
   letter-spacing: 0.03em;
@@ -854,5 +855,4 @@ a:focus .icon-footer {
 	
     outline: 2px solid;
 }
-
 
