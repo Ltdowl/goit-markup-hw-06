@@ -672,7 +672,7 @@ a:focus .icon-footer {
 
 	padding: 40px 40px;
 	max-width: 528px;
-	height: 581px;
+	
 	margin: 0 auto;
 	background-color: var(--primary-white-color);
 	box-shadow: var(--modal-shadow);
