@@ -534,22 +534,21 @@ a:focus .text-card {
 .footer-block {
 	display: flex;
 	align-items: baseline;
-}
-.footer-left {
-	display: inline-block;
-	margin-right: 70px;
-}
-.footer-center {
-	display: inline-block;
-	margin-right: 93px;
+	justify-content: space-between;
 }
 
+.footer-left {
+
+}
+.footer-center {
+
+}
 .footer-right {
-	display: inline-block;
-	align-items: baseline;
+
 }
 
 .footer-title {
+	display: block;
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 1.14;
@@ -571,6 +570,7 @@ a:focus .text-card {
   height: 50px;
 	display: flex;
   justify-content: center;
+  align-items: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	background-color: var(--accent-color-button);
@@ -582,9 +582,15 @@ a:focus .text-card {
 }
 
 .form-input {
+margin-right: 12px;
+}
+	
+
+
+.form-input-footer {
 	width: 358px;
 	height: 50px;
-	margin-right: 12px;
+	
 	padding-left: 16px;
 	background-color: var(--primary-dark-color);
 	border: 1px solid rgba(255, 255, 255, 0.3);
@@ -595,7 +601,7 @@ a:focus .text-card {
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-input:focus {
+.form-input-footer:focus {
 	background-color: var(--primary-white-color);
 }
 
@@ -610,8 +616,8 @@ a:focus .text-card {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:focus + .footer-form-text,
-.form-input:not(:placeholder-shown) + .footer-form-text {
+.form-input-footer:focus + .footer-form-text,
+.form-input-footer:not(:placeholder-shown) + .footer-form-text {
 	transform: translateX(-70px);
 	color: var(--primary-white-color);
 }
@@ -665,8 +671,9 @@ a:focus .icon-footer {
 	transform: translate(-50%, -50%) scale(1);
 
 	padding: 40px 40px;
-	min-width: 528px;
+	max-width: 528px;
 	min-height: 581px;
+	margin: 0 auto;
 	background-color: var(--primary-white-color);
 	box-shadow: var(--modal-shadow);
 	border-radius: 4px;
@@ -676,23 +683,17 @@ a:focus .icon-footer {
 }
 .close-backdrop {
 	position: absolute;
-	top: 8px;
-	right: 8px;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
+	top: 8px;
+	right: 8px;
 	height: 30px;
 	width: 30px;
 	background-color: var(--primary-white-color);
-
 	border: 1px solid var(--modal-button);
-
 	border-radius: 100%;
-
 	cursor: pointer;
-
 	transition-property: fill;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -702,62 +703,65 @@ a:focus .icon-footer {
 	fill: var(--accent-color);
 }
 
-.block-input {
-	
-	display: flex;
-	flex-direction: column;
+.button-modal {
+  margin: 0 auto;
 }
 
+.block-input {
+	margin: 0 auto;
+	
+}
 .modal-text {
-	display: inline-block;
-	font-style: normal;
-	font-weight: bold;
 	font-size: 20px;
 	line-height: 1.15;
 	text-align: center;
 	letter-spacing: 0.03em;
 	color: var(--primary-text-color);
-	margin-bottom: 30px;
 }
 
-.button-modal {
-  margin-left: auto;
-  margin-right: auto;
+.modal-form-text {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  
 }
-
-.form-input-modal {
+.input-modal-block {
 	position: relative;
-	margin-bottom: 28px;
 }
-.textarea {
-	margin-bottom: 20px;
-}
-
 .modal-input {
-	width: 448px;
+	width: 100%;
 	height: 40px;
 	padding-left: 42px;
 	border: 1px solid rgba(33, 33, 33, 0.2);
-	box-sizing: border-box;
 	border-radius: 4px;
 	transition-property: border-color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-input-area {
+	display: block;
+	width: 100%;
+	height: 120px;
+	padding: 12px 16px;
+	resize: none;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+}
+
 .modal-icon {
 	position: absolute;
-	top: 50%;
+	top: 0;
 	left: 15px;
-	transform: translateY(-50%);
-
 	transition-property: fill;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus,
-.modal-input-text:focus {
+.modal-input-area:focus {
 	border-color: var(--accent-color);
 	outline: none;
 }
@@ -765,32 +769,24 @@ a:focus .icon-footer {
 .modal-input:focus ~ .modal-icon {
 	fill: var(--accent-color);
 }
-
-.modal-input-text {
-	width: 448px;
-	height: 120px;
-	padding: 12px 16px;
-	resize: none;
-	border: 1px solid rgba(33, 33, 33, 0.2);
-	box-sizing: border-box;
-	border-radius: 4px;
+.form-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 12px;
 }
-
-.modal-form-text {
-	position: absolute;
-	top: -24px;
-	left: 0;
+.form-list + .form-list {
+	margin-top: 10px;
 }
-
 
 
 .checkbox {
   position: relative;
-  margin-bottom: 30px;
   
-  margin-left: auto;
-  margin-right: auto;
-	
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-left: 36.38px;
+  	
 }
 .checkbox-mark {
 	position: absolute;
@@ -804,34 +800,32 @@ a:focus .icon-footer {
 	clip-path: inset(50%);
 	margin: -1px;
 }
-.check-text {
-	margin-bottom: 0;
-	margin-left: 24px;
-}
+
 .check-link {
 	color: var(--accent-color);
 }
 
-.checkbox-text {
-  display: block;
+.checkbox-text {	
   font-size: 14px;
   line-height: 1.71; 
   letter-spacing: 0.03em;
 }
 .checkbox-icon {
-	position: absolute;
+  position: absolute;
   top: 50%;
-  left: 0;
+  left: 15px;
   width: 16px;
-	height: 15px;
+  height: 15px;
   border: 2px solid var(--primary-text-color);
-  border-radius: 2px;
+  border-radius: 4px;
   transform: translateY(-50%); 
 }
+
+
 .icon-check {
-	position: absolute;
+  position: absolute;
   top: 50%;
-  left: 0;
+  left: 15px;
   opacity: 0;
   fill: var(--primary-white-color);
   transform: translateY(-50%);
@@ -839,17 +833,26 @@ a:focus .icon-footer {
 
 .checkbox-icon,
 .icon-check {
-  transition-property: background-color, border, opacity;
+	
+	cursor: pointer;
+    transition-property: background-color, border, opacity;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox-mark:checked ~ .checkbox-text .icon-check {
 
   background-color: var(--accent-color);
-  border-radius: 2px;
+  border-radius: 4px;
   opacity: 1;
 }
 .checkbox-mark:checked ~ .checkbox-text .checkbox-icon {
   background-color: var(--accent-color);
   border: 2px solid var(--accent-color);
 }
+
+.checkbox-mark:focus ~ .checkbox-text .checkbox-icon {
+	
+    outline: 2px solid;
+}
+
+
