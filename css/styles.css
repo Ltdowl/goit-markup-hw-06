@@ -785,11 +785,9 @@ a:focus .icon-footer {
 
 .checkbox {
   position: relative;
-  
   margin-top: 20px;
   margin-bottom: 30px;
   padding-left: 36.38px;
-  	
 }
 .checkbox-mark {
 	position: absolute;
